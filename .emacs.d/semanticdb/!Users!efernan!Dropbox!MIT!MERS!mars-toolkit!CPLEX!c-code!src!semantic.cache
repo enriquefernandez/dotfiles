@@ -1,0 +1,378 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "CPLEX_lisp_bridge.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ilcplex/cplex.h" include nil nil [1 27])
+            ("CPLEX_lisp_bridge.h" include nil nil [28 58])
+            ("stdio.h" include (:system-flag t) nil [59 77])
+            ("string.h" include (:system-flag t) nil [78 97])
+            ("env_arr" variable
+               (:dereference 1
+                :type ("CPXENVptr" type (:type "class") nil nil))
+                nil [99 145])
+            ("env_free_arr" variable
+               (:dereference 1
+                :type "char")
+                nil [146 192])
+            ("lp_arr" variable
+               (:dereference 2
+                :type ("CPXLPptr" type (:type "class") nil nil))
+                nil [194 262])
+            ("lp_free_arr" variable
+               (:dereference 2
+                :type "char")
+                nil [263 332])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [343 352])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [353 365]))                  
+                :type "int")
+                nil [334 818])
+            ("get_status_string" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [842 854])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [855 866])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [867 880]))                  
+                :type "int")
+                nil [820 1045])
+            ("get_major_version" function (:type "int") nil [1047 1097])
+            ("get_minor_version" function (:type "int") nil [1099 1149])
+            ("init_interface" function (:type "int") nil [1151 1354])
+            ("init_environment" function (:type "int") nil [1534 1899])
+            ("init_problem" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [1918 1930]))                  
+                :type "int")
+                nil [1901 2375])
+            ("new_columns" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [2393 2405])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [2406 2417])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [2418 2428])
+                    ("obj" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2429 2442])
+                    ("lb" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2443 2455])
+                    ("ub" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2456 2468]))                  
+                :type "int")
+                nil [2377 2600])
+            ("add_equality_constraint" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [2630 2642])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [2643 2654])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [2655 2665])
+                    ("rhs" variable (:type "double") (reparse-symbol arg-sub-list) [2666 2677])
+                    ("idx" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2678 2691])
+                    ("val" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2692 2705]))                  
+                :type "int")
+                nil [2602 3024])
+            ("add_less_than_constraint" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [3055 3067])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [3068 3079])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [3080 3090])
+                    ("rhs" variable (:type "double") (reparse-symbol arg-sub-list) [3091 3102])
+                    ("idx" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3103 3116])
+                    ("val" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3117 3130]))                  
+                :type "int")
+                nil [3026 3475])
+            ("add_greater_than_constraint" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [3509 3521])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [3522 3533])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [3534 3544])
+                    ("rhs" variable (:type "double") (reparse-symbol arg-sub-list) [3545 3556])
+                    ("idx" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3557 3570])
+                    ("val" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3571 3584]))                  
+                :type "int")
+                nil [3477 3929])
+            ("add_range_constraint" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [3956 3968])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [3969 3980])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [3981 3991])
+                    ("rhs" variable (:type "double") (reparse-symbol arg-sub-list) [3992 4003])
+                    ("range" variable (:type "double") (reparse-symbol arg-sub-list) [4004 4017])
+                    ("idx" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4018 4031])
+                    ("val" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4032 4045]))                  
+                :type "int")
+                nil [3931 4538])
+            ("add_bounded_constraint" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [4567 4579])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [4580 4591])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [4592 4602])
+                    ("lb" variable (:type "double") (reparse-symbol arg-sub-list) [4603 4613])
+                    ("ub" variable (:type "double") (reparse-symbol arg-sub-list) [4614 4624])
+                    ("idx" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4625 4638])
+                    ("val" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4639 4652]))                  
+                :type "int")
+                nil [4540 4732])
+            ("get_column_solution" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [4758 4770])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [4771 4782])
+                    ("soln_arr" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4783 4801]))                  
+                :type "int")
+                nil [4734 4906])
+            ("get_number_of_rows" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [4931 4943])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [4944 4955]))                  
+                :type "int")
+                nil [4908 5025])
+            ("get_number_of_cols" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5050 5062])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5063 5074]))                  
+                :type "int")
+                nil [5027 5144])
+            ("clear_problem_rows" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5169 5181])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5182 5193]))                  
+                :type "int")
+                nil [5146 5287])
+            ("clear_problem_cols" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5312 5324])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5325 5336]))                  
+                :type "int")
+                nil [5289 5430])
+            ("clear_problem" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5450 5462])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5463 5474]))                  
+                :type "int")
+                nil [5432 5561])
+            ("get_obj_val" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5582 5594])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5595 5606]))                  
+                :type "double")
+                nil [5563 5703])
+            ("solve_lp" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5718 5730])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5731 5742]))                  
+                :type "int")
+                nil [5705 5830])
+            ("solve_lp2" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5846 5858])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [5859 5870])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5871 5884]))                  
+                :type "int")
+                nil [5832 6208])
+            ("get_STAT_NUM_BEST" function (:type "int") nil [6210 6264])
+            ("get_STAT_OPTIMAL" function (:type "int") nil [6266 6318])
+            ("get_STAT_INFEASIBLE" function (:type "int") nil [6320 6378])
+            ("get_status" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [6395 6407])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [6408 6419]))                  
+                :type "int")
+                nil [6380 6485])
+            ("free_environment" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [6508 6520]))                  
+                :type "int")
+                nil [6487 6752])
+            ("free_problem" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [6771 6783])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [6784 6795]))                  
+                :type "int")
+                nil [6754 6985])
+            ("number_free_environments" function (:type "int") nil [6987 7148])
+            ("number_free_problems" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [7175 7187]))                  
+                :type "int")
+                nil [7150 7322])
+            ("get_positive_infinity" function (:type "double") nil [7324 7380])
+            ("get_negative_infinity" function (:type "double") nil [7382 7439])
+            ("dump_problem" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [7458 7470])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [7471 7482])
+                    ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7483 7495]))                  
+                :type "int")
+                nil [7441 7575])
+            ("load_problem_from_file" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [7604 7616])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [7617 7628])
+                    ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7629 7641]))                  
+                :type "int")
+                nil [7577 7724])
+            ("current_quad_diag" variable
+               (:pointer 1
+                :type "double")
+                nil [7726 7752])
+            ("set_diag_quadratic" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [7869 7881])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [7882 7893])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [7894 7903])
+                    ("vals" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7904 7918]))                  
+                :type "int")
+                nil [7846 8697])
+            ("confnumcols" variable (:type "int") nil [8699 8728])
+            ("confnumrows" variable (:type "int") nil [8699 8728])
+            ("generate_conflicts" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [8840 8852])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [8853 8864])
+                    ("num_row_conflicts" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [8865 8892])
+                    ("num_col_conflicts" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [8893 8920]))                  
+                :type "int")
+                nil [8817 9140])
+            ("get_CONFLICT_MEMBER" function (:type "int") nil [9142 9200])
+            ("get_CONFLICT_LB" function (:type "int") nil [9202 9252])
+            ("get_CONFLICT_UB" function (:type "int") nil [9254 9304])
+            ("get_CONFLICT_POSSIBLE_MEMBER" function (:type "int") nil [9306 9382])
+            ("get_CONFLICT_POSSIBLE_LB" function (:type "int") nil [9384 9452])
+            ("get_CONFLICT_POSSIBLE_UB" function (:type "int") nil [9454 9522])
+            ("get_conflicts" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [9788 9800])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [9801 9812])
+                    ("_rowindex" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [9813 9832])
+                    ("_rowstatus" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [9833 9853])
+                    ("_colindex" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [9854 9873])
+                    ("_colstatus" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [9874 9894]))                  
+                :type "int")
+                nil [9770 10465])
+            ("change_constraint_sense" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [10549 10561])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [10562 10573])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [10574 10584])
+                    ("sense" variable (:type "char") (reparse-symbol arg-sub-list) [10585 10596]))                  
+                :type "int")
+                nil [10521 10742])
+            ("change_rhs" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [10829 10841])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [10842 10853])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [10854 10864])
+                    ("rhs" variable (:type "double") (reparse-symbol arg-sub-list) [10865 10876]))                  
+                :type "int")
+                nil [10814 11012])
+            ("change_range" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [11108 11120])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [11121 11132])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [11133 11143])
+                    ("range" variable (:type "double") (reparse-symbol arg-sub-list) [11144 11157]))                  
+                :type "int")
+                nil [11091 11304])
+            ("deactivate_constraint" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [11452 11464])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [11465 11476])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [11477 11487]))                  
+                :type "int")
+                nil [11426 11901])
+            ("get_conflict_using_objective" function
+               (:arguments 
+                  ( ("env_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [11936 11948])
+                    ("lp_ptr" variable (:type "int") (reparse-symbol arg-sub-list) [11949 11960])
+                    ("obj_value" variable (:type "double") (reparse-symbol arg-sub-list) [11961 11978])
+                    ("conflicted_rows" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [11979 12000]))                  
+                :type "int")
+                nil [11903 13442]))          
+    :file "CPLEX_lisp_bridge.c"
+    :pointmax 13443
+    :fsize 13442
+    :lastmodtime '(20919 58050 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!efernan!Dropbox!MIT!MERS!mars-toolkit!CPLEX!c-code!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

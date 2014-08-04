@@ -1,0 +1,20 @@
+;; Object cedet-bzr/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cedet-bzr/"
+  :tables
+  (list
+    (semanticdb-table "cedet-devel-load.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("when" code nil nil [1091 1185])
+            ("let" code nil nil [1333 2893])
+            ("unless" code nil nil [2970 4880])
+            ("cedet-devel-load" package nil nil [4882 4909]))          
+      :file "cedet-devel-load.el"
+      :pointmax 4918
+      :fsize 4917
+      :lastmodtime '(20831 38598 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!efernan!.emacs.d!site-lisp!cedet-bzr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

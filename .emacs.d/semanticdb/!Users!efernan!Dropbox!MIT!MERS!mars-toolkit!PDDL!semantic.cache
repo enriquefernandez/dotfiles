@@ -1,0 +1,68 @@
+;; Object PDDL/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "PDDL/"
+  :tables
+  (list
+    (semanticdb-table "pddl.lisp"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("in-package" code nil nil [1 19])
+            ("*domains*" variable nil nil [60 82])
+            ("*problems*" variable nil nil [123 146])
+            ("load-pddl" function (:arguments ("pddl-file-pathname")) nil [148 379])
+            ("DEFINE" function (:arguments ("dtype" "body")) nil [455 622])
+            ("setf-union" function (:arguments ("list1-loc" "list2" "test" "list2-dominates")) nil [744 1339])
+            ("domain" type
+               (:members ("name" "requirements" "types" "constants" "predicates" "actions" "problems")
+                :type "struct")
+                nil [1464 2001])
+            ("print-domain" function (:arguments ("domain" "stream" "depth")) nil [2003 2511])
+            ("def-domain" function (:arguments ("name" "clauses")) nil [2513 5415])
+            ("get-domain" function (:arguments ("name")) nil [5417 5497])
+            ("action" type
+               (:members ("name" "parameters" "variables" "duration" "condition" "effect" "components")
+                :type "struct")
+                nil [5623 6090])
+            ("print-action" function (:arguments ("action" "stream" "depth")) nil [6093 6472])
+            ("process-pddl-typed-list" function (:arguments ("pddl-typed-list")) nil [6474 8057])
+            ("process-adl-typed-list" function (:arguments ("adl-typed-list")) nil [8059 8701])
+            ("clausify-typed-list" function (:arguments ("typed-list")) nil [8703 9030])
+            ("variables-typed-list" function (:arguments ("typed-list")) nil [9032 9192])
+            ("types-typed-list" function (:arguments ("typed-list")) nil [9194 9360])
+            ("make-typed-pair-from-typed-list" function (:arguments ("typed-list")) nil [9362 9555])
+            ("simplify-typed-list" function (:arguments ("typed-list")) nil [9557 10063])
+            ("supertypeof-list" function (:arguments ("typed-list" "include-object")) nil [10065 11959])
+            ("supertypeof" function (:arguments ("type" "typed-list" "include-object")) nil [11961 12870])
+            ("expand-super" function (:arguments ("subtypes" "super-types")) nil [13019 13368])
+            ("compute-reachable" function (:arguments ("sub" "supers" "type-pairs" "all-type-pairs")) nil [13446 13966])
+            ("def-action" function (:arguments ("name" "parameters" "precondition" "effect")) nil [13969 14431])
+            ("def-durative-action" function (:arguments ("name" "parameters" "duration" "condition" "effect")) nil [14433 15015])
+            ("reorder-precs" function (:arguments ("preconditions")) nil [15020 15612])
+            ("prec-ordinal" function (:arguments ("p")) nil [15616 15844])
+            ("prec-order" function (:arguments ("p1" "p2")) nil [15887 15955])
+            ("preprocess-precs" function (:arguments ("precs")) nil [15958 16223])
+            ("group-durative-precs" function (:arguments ("precs")) nil [16225 16756])
+            ("remove-durative-precs" function (:arguments ("precs")) nil [16758 17097])
+            ("get-action" function
+               (:parent "symbol"
+                :arguments ("name" "domain"))
+                nil [17099 17344])
+            ("problem" type
+               (:members ("name" "domain" "requirements" "objects" "init" "goal")
+                :type "struct")
+                nil [17472 17946])
+            ("print-problem" function (:arguments ("problem" "stream" "depth")) nil [18141 18534])
+            ("def-problem" function (:arguments ("name" "clauses")) nil [18537 20090])
+            ("get-problem" function (:arguments ("name")) nil [20092 20174])
+            ("simple-invert" function (:arguments ("p")) nil [20176 20257])
+            ("check-requirements" function (:arguments ("capabilities" "problem" "domain")) nil [20438 21045])
+            ("defparameter" code nil nil [21047 21523])
+            ("reduce-requirements" function (:arguments ("reqs")) nil [21525 21935]))          
+      :file "pddl.lisp"
+      :pointmax 21936
+      :fsize 21935
+      :lastmodtime '(20919 58051 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!efernan!Dropbox!MIT!MERS!mars-toolkit!PDDL!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
