@@ -1,8 +1,10 @@
-;; Packages
+;;; Packages:
+
 (setq efg-packages
       '(
 		ac-slime
 		auto-complete
+		ac-cider
 		flx-ido
 		projectile
 		clojure-mode
@@ -14,7 +16,8 @@
 		solarized-theme
 		autopair
 		yaml-mode
-        ))
+		jedi
+		))
 
 ;; Mac meta keys
 (setq mac-option-modifier 'super)
@@ -134,6 +137,27 @@
 (setq markdown-command "pandoc --smart -f markdown -t html")
 ;;(setq markdown-css-path (expand-file-name "markdown.css" abedra/vendor-dir))
 
+
+;; Flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+
+;; Slime autocomplete
+(add-hook 'slime-mode-hook 'set-up-slime-ac)
+(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'slime-repl-mode))
+
+;; ac-cider
+(add-hook 'cider-mode-hook 'ac-flyspell-workaround)
+(add-hook 'cider-mode-hook 'ac-cider-setup)
+(add-hook 'cider-repl-mode-hook 'ac-cider-setup)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'cider-mode))
+
+;; Python jedi
+;;(add-hook 'python-mode-hook 'jedi:setup)
+;;(setq jedi:complete-on-dot t)
 
 ;; Themes
 (if window-system
