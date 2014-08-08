@@ -17,7 +17,15 @@
 		autopair
 		yaml-mode
 		jedi
+		ox-reveal
+		htmlize
+		ein
+		multiple-cursors
 		))
+
+
+;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Mac meta keys
 (setq mac-option-modifier 'super)
@@ -115,6 +123,13 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;; Magit GIT
+(global-set-key (kbd "C-x g") 'magit-status)
+
+;; org-reveal
+(setq org-reveal-root (format "file://%s" (expand-file-name "~/dotfiles/reveal.js")))
+
+
 ;; Load MERS mars-toolkit setup file
 (load "mars-setup")
 
@@ -158,6 +173,12 @@
 ;; Python jedi
 ;;(add-hook 'python-mode-hook 'jedi:setup)
 ;;(setq jedi:complete-on-dot t)
+
+;; Multiple cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; Themes
 (if window-system
