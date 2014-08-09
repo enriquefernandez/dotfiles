@@ -2,26 +2,30 @@
 
 (setq efg-packages
       '(
-		ac-slime
-		auto-complete
-		ac-cider
-		flx-ido
-		projectile
-		clojure-mode
-		clojure-test-mode
-		flycheck
-		magit
-		markdown-mode
-		org
-		solarized-theme
-		autopair
-		yaml-mode
-		jedi
-		ox-reveal
-		htmlize
-		ein
-		multiple-cursors
-		))
+        cpputils-cmake
+        ac-slime
+        auto-complete
+        auto-complete-clang
+        auto-complete-c-headers
+        ac-cider
+        flx-ido
+        projectile
+        clojure-mode
+        clojure-test-mode
+        flycheck
+        magit
+        markdown-mode
+        org
+        solarized-theme
+        autopair
+        yaml-mode
+        jedi
+        ox-reveal
+        htmlize
+        ein
+        multiple-cursors
+        yasnippet
+        ))
 
 
 ;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
@@ -119,15 +123,69 @@
 ;; Autopair parenthesis
 (require 'autopair)
 
+;; c indentation
+(setq c-default-style "linux"
+          c-basic-offset 4)
+
+;;  cpp-utils-cmake
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (if (derived-mode-p 'c-mode 'c++-mode)
+                (cppcm-reload-all)
+              )))
+;; ;; OPTIONAL, avoid typing full path when starting gdb
+;; (global-set-key (kbd "C-c C-g")
+;;  '(lambda ()(interactive) (gud-gdb (concat "gdb --fullname " (cppcm-get-exe-path-current-buffer)))))
+;; OPTIONAL, some users need specify extra flags forwarded to compiler
+;; (setq cppcm-extra-preprocss-flags-from-user '("-I/usr/src/linux/include" "-DNDEBUG"))
+
 ;; Auto-complete
 (require 'auto-complete-config)
+(require 'auto-complete-clang)
 (ac-config-default)
+
+;; (setq ac-auto-start nil)
+;; (setq ac-quick-help-delay 0.5)
+;; ;; (ac-set-trigger-key "TAB")
+;; ;; (define-key ac-mode-map  [(control tab)] 'auto-complete)
+;; (define-key ac-mode-map  [(control tab)] 'auto-complete)
+;; (defun my-ac-config ()
+;;   (setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
+;;   (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
+;;   ;; (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
+;;   (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
+;;   (add-hook 'css-mode-hook 'ac-css-mode-setup)
+;;   (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+;;   (global-auto-complete-mode t))
+;; (defun my-ac-cc-mode-setup ()
+;;   (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
+;; (add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
+;; ;; ac-source-gtags
+;; (my-ac-config)
+
 
 ;; Magit GIT
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;; org-reveal
 (setq org-reveal-root (format "file://%s" (expand-file-name "~/dotfiles/reveal.js")))
+
+
+;; Comment or uncomment
+(defun comment-or-uncomment-current-line-or-region ()
+  "Comments or uncomments current current line or whole lines in region."
+  (interactive)
+  (save-excursion
+    (let (min max)
+      (if (region-active-p)
+          (setq min (region-beginning) max (region-end))
+        (setq min (point) max (point)))
+      (comment-or-uncomment-region
+       (progn (goto-char min) (line-beginning-position))
+       (progn (goto-char max) (line-end-position))))))
+
+(global-set-key (kbd "C-;") 'comment-or-uncomment-current-line-or-region)
+
 
 
 ;; Load MERS mars-toolkit setup file

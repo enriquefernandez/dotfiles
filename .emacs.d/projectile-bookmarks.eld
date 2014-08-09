@@ -1,1 +1,1 @@
-("~/Dropbox/MIT/MERS/mars-toolkit/")
+("~/Projects/RF_Localization/RFLocalization/" "~/dotfiles/" "~/Projects/IntroToROS/" "~/dotfiles/.emacs.d/elpa/jedi-20140321.1323/" "~/Downloads/test_clojure/" "~/Dropbox/MIT/MERS/mars-toolkit/")
