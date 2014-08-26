@@ -27,6 +27,7 @@
         yasnippet
 		auctex
 		auctex-latexmk
+		exec-path-from-shell
         ))
 
 
@@ -74,6 +75,11 @@
                             (not (package-built-in-p x))
                             (package-installed-p x)))
                   (mapcar 'car package-archive-contents))))
+
+
+;; Yasnippet
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+(yas-global-mode 1)
 
 
 ;; Parenthesis highlighting
@@ -279,14 +285,15 @@
      '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
 
 
-;; Add latex path (otherwise auctex doesn't work in OSX)
-(getenv "PATH")
- (setenv "PATH"
-(concat
- "/usr/local/bin" ":"
- "/usr/texbin" ":"
+;; Fix PATH on mac osx
+;; so that it's the same as if executed from the terminal
+;; https://github.com/purcell/exec-path-from-shell
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
-(getenv "PATH")))
+;; Stop extremely annoying beep in osx
+(setq ring-bell-function #'ignore)
+;; (setq visible-bell t)
 
 
 (custom-set-variables
