@@ -28,6 +28,9 @@
 		auctex
 		auctex-latexmk
 		exec-path-from-shell
+		helm
+		helm-gtags
+		helm-projectile
         ))
 
 
@@ -97,10 +100,37 @@
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces nil)
 
+;; Helm
+(global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(helm-mode 1)
+
+;; Helm gtags
+(setq
+ helm-gtags-ignore-case t
+ helm-gtags-auto-update t
+ helm-gtags-use-input-at-cursor t
+ helm-gtags-pulse-at-cursor t
+ helm-gtags-prefix-key "\C-cg"
+ helm-gtags-suggested-key-mapping t
+ )
+;; (add-hook 'dired-mode-hook 'helm-gtags-mode)
+(add-hook 'eshell-mode-hook 'helm-gtags-mode)
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
+(add-hook 'asm-mode-hook 'helm-gtags-mode)
+
+;; (define-key helm-gtags-mode-map (kbd "C-c g a") 'helm-gtags-tags-in-this-function)
+;; (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-select)
+;; (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
+;; (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
+;; (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
+;; (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
 
 ;; Projectile
 (projectile-global-mode)
-(setq projectile-enable-caching t)
+;; (setq projectile-enable-caching t)
 
 
 ;; Recent files
@@ -110,10 +140,10 @@
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;; Windmove
-(global-set-key (kbd "C-c h")  'windmove-left)
-(global-set-key (kbd "C-c l") 'windmove-right)
-(global-set-key (kbd "C-c j")    'windmove-up)
-(global-set-key (kbd "C-c k")  'windmove-down)
+;; (global-set-key (kbd "C-c h")  'windmove-left)
+;; (global-set-key (kbd "C-c l") 'windmove-right)
+;; (global-set-key (kbd "C-c j")    'windmove-up)
+;; (global-set-key (kbd "C-c k")  'windmove-down)
 
 ;; Start to org mode directly
 (setq inhibit-splash-screen t
@@ -141,6 +171,9 @@
             (if (derived-mode-p 'c-mode 'c++-mode)
                 (cppcm-reload-all)
               )))
+
+
+
 ;; ;; OPTIONAL, avoid typing full path when starting gdb
 ;; (global-set-key (kbd "C-c C-g")
 ;;  '(lambda ()(interactive) (gud-gdb (concat "gdb --fullname " (cppcm-get-exe-path-current-buffer)))))
@@ -203,6 +236,8 @@
 
 ;; Language hooks
 
+;; .h in C++ mode
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 ;; YAML
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
