@@ -29,6 +29,7 @@
 		auctex-latexmk
 		exec-path-from-shell
 		helm
+        cmake-mode
 		helm-gtags
 		helm-projectile
         ))
