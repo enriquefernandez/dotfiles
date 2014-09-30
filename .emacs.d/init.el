@@ -31,6 +31,7 @@
 		helm
 		helm-gtags
 		helm-projectile
+		ag
         ))
 
 
