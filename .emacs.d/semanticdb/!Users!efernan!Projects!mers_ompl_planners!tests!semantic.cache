@@ -1,0 +1,60 @@
+;; Object tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tests/"
+  :tables (list 
+   (semanticdb-table "iAPSP_test.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ompl/base/SpaceInformation.h" include (:system-flag t) nil [3 42])
+            ("ompl/base/spaces/SE3StateSpace.h" include (:system-flag t) nil [43 86])
+            ("ompl/geometric/planners/rrt/RRTConnect.h" include (:system-flag t) nil [87 138])
+            ("ompl/geometric/SimpleSetup.h" include (:system-flag t) nil [139 178])
+            ("ompl/config.h" include (:system-flag t) nil [180 204])
+            ("iostream" include (:system-flag t) nil [205 224])
+            ("iAPSP.h" include nil nil [226 244])
+            ("ob" type
+               (:kind alias
+                :members 
+                  ( ("ompl::base" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [246 272])
+            ("og" type
+               (:kind alias
+                :members 
+                  ( ("ompl::geometric" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [273 304])
+            ("isStateValid" function
+               (:arguments 
+                  ( ("state" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("ob::State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [324 347]))                  
+                :type "bool")
+                nil [306 1076])
+            ("plan" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1088 1093]))                  
+                :type "void")
+                nil [1078 3004])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [3017 3021])
+                    ("" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3022 3030]))                  
+                :type "int")
+                nil [3008 3300]))          
+    :file "iAPSP_test.cpp"
+    :pointmax 3169
+    :fsize 3300
+    :lastmodtime '(21541 50143 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!efernan!Projects!mers_ompl_planners!tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

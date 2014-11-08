@@ -56,6 +56,8 @@
       ;; Note: This path is interpreted by Allegro. If you do use the tilde (~),
       ;;        it will be what Allegro calls your HOME directory.
       (slime-config-filename "C:/Users/David Wang/.slime.lisp")
+
+      
     )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

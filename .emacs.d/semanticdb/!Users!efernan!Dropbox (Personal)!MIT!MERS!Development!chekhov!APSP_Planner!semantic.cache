@@ -1,0 +1,2168 @@
+;; Object APSP_Planner/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "APSP_Planner/"
+  :tables (list 
+   (semanticdb-table "customreader.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("openrave/openrave.h" include (:system-flag t) nil [187 217])
+            ("openrave/plugin.h" include (:system-flag t) nil [218 246])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [248 268])
+            ("OpenRAVE" using (:type ("OpenRAVE" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [269 294])
+            ("cppexamples" type
+               (:members 
+                  ( ("CustomController" type
+                       (:superclasses 
+                          ( ("ControllerBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [370 377])
+                            ("XMLData" type
+                               (:superclasses 
+                                  ( ("XMLReadable" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [423 430])
+                                    ("XMLData" function
+                                       (:constructor-flag t
+                                        :type ("XMLData" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [439 485])
+                                    ("igains" variable (:type ("vector" type
+                                         (:template-specifier 
+                                            ( ("dReal" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [494 522])
+                                    ("pgains" variable (:type ("vector" type
+                                         (:template-specifier 
+                                            ( ("dReal" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [494 522]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [382 529])
+                            ("PIDXMLReader" type
+                               (:superclasses 
+                                  ( ("BaseXMLReader" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [583 590])
+                                    ("PIDXMLReader" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("piddata" variable (:type ("boost::shared_ptr" type
+                                                 (:template-specifier 
+                                                    ( ("XMLData" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [612 647])
+                                            ("atts" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AttributesList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [648 675]))                                          
+                                        :type ("PIDXMLReader" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [599 1052])
+                                    ("GetReadable" function
+                                       (:typemodifiers ("virtual")
+                                        :type ("XMLReadablePtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1062 1139])
+                                    ("startElement" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1185 1209])
+                                            ("atts" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AttributesList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1210 1237]))                                          
+                                        :type ("ProcessElement" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1149 1354])
+                                    ("endElement" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1388 1412]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1364 2024])
+                                    ("characters" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("ch" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2058 2080]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2034 2148])
+                                    ("protected" label nil (reparse-symbol classsubparts) [2150 2160])
+                                    ("_piddata" variable (:type ("boost::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("XMLData" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2169 2205])
+                                    ("_ss" variable (:type ("stringstream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2214 2231]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [535 2238])
+                            ("CreateXMLReader" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("ptr" variable (:type ("InterfaceBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2284 2305])
+                                    ("atts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("AttributesList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2306 2333]))                                  
+                                :type ("BaseXMLReaderPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2244 2507])
+                            ("CustomController" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("penv" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2530 2554]))                                  
+                                :type ("CustomController" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2513 2589])
+                            ("CustomController" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2594 2629])
+                            ("Init" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("robot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2653 2672])
+                                    ("dofindices" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2673 2708])
+                                    ("nControlTransformation" variable (:type "int") (reparse-symbol arg-sub-list) [2709 2736]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2635 3628])
+                            ("GetControlDOFIndices" function
+                               (:typemodifiers ("virtual")
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [3634 3730])
+                            ("IsControlTransformation" function
+                               (:typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [3735 3826])
+                            ("Reset" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("options" variable (:type "int") (reparse-symbol arg-sub-list) [3851 3863]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3832 3871])
+                            ("SetDesired" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("values" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("dReal" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3900 3933])
+                                    ("trans" variable (:type ("TransformConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3934 3958]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3876 3988])
+                            ("SetPath" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ptraj" variable (:type ("TrajectoryBaseConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4014 4043]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3993 4073])
+                            ("SimulationStep" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("fTimeElapsed" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4106 4125]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4078 4133])
+                            ("IsDone" function
+                               (:typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4138 4189])
+                            ("GetTime" function
+                               (:typemodifiers ("virtual")
+                                :type ("dReal" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4194 4249])
+                            ("GetRobot" function
+                               (:typemodifiers ("virtual")
+                                :type ("RobotBasePtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4254 4323])
+                            ("protected" label nil (reparse-symbol classsubparts) [4325 4335])
+                            ("_probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4340 4361])
+                            ("_dofindices" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4366 4395])
+                            ("_nControlTransformation" variable (:type "int") (reparse-symbol classsubparts) [4400 4428]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [321 4431]))                  
+                :type "namespace")
+                nil [296 4434])
+            ("s_RegisteredReader" variable
+               (:typemodifiers ("static")
+                :type ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("void" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4465 4515])
+            ("CreateInterfaceValidated" function
+               (:arguments 
+                  ( ("type" variable (:type ("InterfaceType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4559 4578])
+                    ("interfacename" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4579 4612])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("std::istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4613 4634])
+                    ("penv" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4635 4659]))                  
+                :type ("InterfaceBasePtr" type (:type "class") nil nil))
+                nil [4517 5155])
+            ("GetPluginAttributesValidated" function
+               (:arguments 
+                  ( ("info" variable
+                       (:reference 1
+                        :type ("PLUGININFO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5191 5208]))                  
+                :type "void")
+                nil [5157 5282])
+            ("DestroyPlugin" function (:type "void") nil [5304 5385]))          
+    :file "customreader.cpp"
+    :pointmax 5386
+    :fsize 5385
+    :lastmodtime '(21536 12584 0 0)
+    :unmatched-syntax '((symbol 5284 . 5303))
+    )
+   (semanticdb-table "new_structures.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("openrave-core.h" include (:system-flag t) nil [1 27])
+            ("vector" include (:system-flag t) nil [28 45])
+            ("sstream" include (:system-flag t) nil [46 64])
+            ("iostream" include (:system-flag t) nil [65 84])
+            ("boost/format.hpp" include (:system-flag t) nil [85 112])
+            ("openrave/planningutils.h" include (:system-flag t) nil [113 148])
+            ("stdio.h" include (:system-flag t) nil [149 167])
+            ("orexample.h" include nil nil [171 193])
+            ("new_structures.h" include nil nil [197 224])
+            ("OpenRAVE" using (:type ("OpenRAVE" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [228 253])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [254 274])
+            ("PoseState" function
+               (:constructor-flag t
+                :parent "PoseState"
+                :type ("PoseState" type (:type "class") nil nil))
+                nil [313 433])
+            ("Initialize" function
+               (:parent "PoseState"
+                :arguments 
+                  ( ("pose_vec" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("dReal" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [462 490]))                  
+                :type "void")
+                nil [435 519])
+            ("GetPoseVector" function
+               (:parent "PoseState"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("dReal" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [521 591])
+            ("AddEdge" function
+               (:parent "PoseState"
+                :arguments 
+                  ( ("edge" variable
+                       (:pointer 1
+                        :type ("PoseStateEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [617 637]))                  
+                :type "void")
+                nil [593 674])
+            ("GetOutgoingEdges" function
+               (:parent "PoseState"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("PoseStateEdge" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [676 761])
+            ("GetOutgoingEdge" function
+               (:pointer 1
+                :parent "PoseState"
+                :arguments 
+                  ( ("finish_pose" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [805 828]))                  
+                :type ("PoseStateEdge" type (:type "class") nil nil))
+                nil [763 1116])
+            ("getSucc" function
+               (:parent "PoseState"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("list" type
+                             (:template-specifier 
+                                ( ("PoseState" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1144 1164]))                  
+                :type "void")
+                nil [1120 1501])
+            ("getPred" function
+               (:parent "PoseState"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("list" type
+                             (:template-specifier 
+                                ( ("PoseState" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1527 1547]))                  
+                :type "void")
+                nil [1503 1621])
+            ("GetInOpenList" function
+               (:parent "PoseState"
+                :type "bool")
+                nil [1625 1682])
+            ("SetInOpenList" function
+               (:parent "PoseState"
+                :arguments 
+                  ( ("in" variable (:type "bool") (reparse-symbol arg-sub-list) [1714 1722]))                  
+                :type "void")
+                nil [1684 1746])
+            ("GetFeasible" function
+               (:parent "PoseState"
+                :type "bool")
+                nil [1748 1799])
+            ("SetFeasible" function
+               (:parent "PoseState"
+                :arguments 
+                  ( ("feas" variable (:type "bool") (reparse-symbol arg-sub-list) [1829 1839]))                  
+                :type "void")
+                nil [1801 1861])
+            ("GetIDX" function
+               (:parent "PoseState"
+                :type "int")
+                nil [1863 1903])
+            ("SetIDX" function
+               (:parent "PoseState"
+                :arguments 
+                  ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [1928 1938]))                  
+                :type "void")
+                nil [1905 1956])
+            ("GetParent" function
+               (:pointer 1
+                :parent "PoseState"
+                :type ("PoseState" type (:type "class") nil nil))
+                nil [1958 2011])
+            ("SetParent" function
+               (:parent "PoseState"
+                :arguments 
+                  ( ("par" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2039 2054]))                  
+                :type "void")
+                nil [2013 2073])
+            ("ShortInfo" function
+               (:parent "PoseState"
+                :type ("string" type (:type "class") nil nil))
+                nil [2076 2327])
+            ("PoseStateEdge" function
+               (:constructor-flag t
+                :parent "PoseStateEdge"
+                :arguments 
+                  ( ("start_pose" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2398 2420])
+                    ("finish_pose" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2421 2444])
+                    ("ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2445 2469]))                  
+                :type ("PoseStateEdge" type (:type "class") nil nil))
+                nil [2369 2557])
+            ("PoseStateEdge" function
+               (:constructor-flag t
+                :parent "PoseStateEdge"
+                :arguments 
+                  ( ("start_pose" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2588 2610])
+                    ("finish_pose" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2611 2634]))                  
+                :type ("PoseStateEdge" type (:type "class") nil nil))
+                nil [2559 2684])
+            ("GetEdge" function
+               (:pointer 1
+                :parent "PoseStateGraph"
+                :arguments 
+                  ( ("start_pose" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2725 2747])
+                    ("finish_pose" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2748 2771]))                  
+                :type ("PoseStateEdge" type (:type "class") nil nil))
+                nil [2686 3007])
+            ("Initialize" function
+               (:parent "PoseStateEdge"
+                :type "void")
+                nil [3009 3096])
+            ("GetStartPose" function
+               (:pointer 1
+                :parent "PoseStateEdge"
+                :type ("PoseState" type (:type "class") nil nil))
+                nil [3098 3158])
+            ("GetFinishPose" function
+               (:pointer 1
+                :parent "PoseStateEdge"
+                :type ("PoseState" type (:type "class") nil nil))
+                nil [3160 3221])
+            ("GetTraj" function
+               (:parent "PoseStateEdge"
+                :type ("TrajectoryBasePtr" type (:type "class") nil nil))
+                nil [3223 3283])
+            ("GetTrajFeasible" function
+               (:parent "PoseStateEdge"
+                :type "bool")
+                nil [3285 3349])
+            ("SetTraj" function
+               (:parent "PoseStateEdge"
+                :arguments 
+                  ( ("ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3379 3403]))                  
+                :type "void")
+                nil [3351 3445])
+            ("SetTrajFeasible" function
+               (:parent "PoseStateEdge"
+                :arguments 
+                  ( ("feasible" variable (:type "bool") (reparse-symbol arg-sub-list) [3483 3497]))                  
+                :type "void")
+                nil [3447 3528])
+            ("PoseStateGraph" function
+               (:constructor-flag t
+                :parent "PoseStateGraph"
+                :type ("PoseStateGraph" type (:type "class") nil nil))
+                nil [3571 3680])
+            ("AddPoseToGraph" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("joint1_val" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3720 3737])
+                    ("joint2_val" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3738 3755])
+                    ("joint3_val" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3756 3773])
+                    ("joint4_val" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3774 3791])
+                    ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [3792 3800]))                  
+                :type "void")
+                nil [3684 4154])
+            ("AddPoseToGraph" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("pose" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4192 4208])
+                    ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [4209 4217]))                  
+                :type "void")
+                nil [4156 4341])
+            ("GetPose" function
+               (:pointer 1
+                :parent "PoseStateGraph"
+                :arguments 
+                  ( ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [4378 4386]))                  
+                :type ("PoseState" type (:type "class") nil nil))
+                nil [4343 4410])
+            ("GetPath" function
+               (:parent "PoseStateGraph"
+                :type ("list" type
+                     (:template-specifier 
+                        ( ("PoseState" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4413 4680])
+            ("GenerateSimpleGraph" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4725 4745]))                  
+                :type "void")
+                nil [4684 6391])
+            ("GenerateNIncrementGraph1" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6440 6460])
+                    ("num_joint_increments" variable (:type "int") (reparse-symbol arg-sub-list) [6461 6486]))                  
+                :type "void")
+                nil [6394 7552])
+            ("GenerateFourIncrementGraph1" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7604 7624]))                  
+                :type "void")
+                nil [7555 7818])
+            ("GenerateEightIncrementGraph1" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7870 7890]))                  
+                :type "void")
+                nil [7820 8085])
+            ("GenerateNIncrementGraph2" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8135 8155])
+                    ("num_joint_increments" variable (:type "int") (reparse-symbol arg-sub-list) [8156 8181]))                  
+                :type "void")
+                nil [8089 9834])
+            ("GenerateFourIncrementGraph2" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9885 9905]))                  
+                :type "void")
+                nil [9836 10106])
+            ("GenerateEightIncrementGraph2" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10158 10178]))                  
+                :type "void")
+                nil [10108 10381])
+            ("GenerateNIncrementGraph3" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10431 10451])
+                    ("num_joint_increments" variable (:type "int") (reparse-symbol arg-sub-list) [10452 10477]))                  
+                :type "void")
+                nil [10385 12947])
+            ("GenerateFourIncrementGraph3" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12998 13018]))                  
+                :type "void")
+                nil [12949 13219])
+            ("GenerateEightIncrementGraph3" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13271 13291]))                  
+                :type "void")
+                nil [13221 13494])
+            ("GenerateNIncrementGraph" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13543 13563])
+                    ("num_joint_increments" variable (:type "int") (reparse-symbol arg-sub-list) [13564 13589]))                  
+                :type "void")
+                nil [13498 17065])
+            ("GenerateFourIncrementGraph" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17115 17135]))                  
+                :type "void")
+                nil [17067 17260])
+            ("GenerateEightIncrementGraph" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17311 17331]))                  
+                :type "void")
+                nil [17262 17462])
+            ("Initialize" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17498 17518])
+                    ("graph_size" variable (:type "int") (reparse-symbol arg-sub-list) [17519 17534]))                  
+                :type "void")
+                nil [17466 18180])
+            ("AddNewEdgeToGraph" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("start_pose_idx" variable (:type "int") (reparse-symbol arg-sub-list) [18223 18242])
+                    ("finish_pose_idx" variable (:type "int") (reparse-symbol arg-sub-list) [18243 18263]))                  
+                :type "void")
+                nil [18184 18593])
+            ("AddNewOneDirectionEdgeToGraph" function
+               (:pointer 1
+                :parent "PoseStateGraph"
+                :arguments 
+                  ( ("start_pose_idx" variable (:type "int") (reparse-symbol arg-sub-list) [18656 18675])
+                    ("finish_pose_idx" variable (:type "int") (reparse-symbol arg-sub-list) [18676 18696]))                  
+                :type ("PoseStateEdge" type (:type "class") nil nil))
+                nil [18595 18920])
+            ("FW" function
+               (:parent "PoseStateGraph"
+                :type "void")
+                nil [18922 19834])
+            ("PrintFWNextMatrix" function
+               (:parent "PoseStateGraph"
+                :type "void")
+                nil [19836 20145])
+            ("PrintFWDistMatrix" function
+               (:parent "PoseStateGraph"
+                :type "void")
+                nil [20147 20456])
+            ("GetBestPath" function
+               (:pointer 1
+                :parent "PoseStateGraph"
+                :arguments 
+                  ( ("start_pose" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20499 20521])
+                    ("finish_pose" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20522 20545]))                  
+                :type ("DynamicPath" type (:type "class") nil nil))
+                nil [20458 20995])
+            ("PrintPath" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type ("DynamicPath" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21029 21047]))                  
+                :type "void")
+                nil [20998 21372])
+            ("GetPoses" function
+               (:parent "PoseStateGraph"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("PoseState" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [21376 21446])
+            ("ReconstructPath" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [21500 21506])
+                    ("j" variable (:type "int") (reparse-symbol arg-sub-list) [21506 21512]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("PoseState" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [21449 21710])
+            ("Structure" function
+               (:parent "PoseStateGraph"
+                :type ("string" type (:type "class") nil nil))
+                nil [21714 22339])
+            ("pose_distance_func" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22369 22382])
+                    ("b" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22383 22396]))                  
+                :type "double")
+                nil [22343 22859])
+            ("pose_distance" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22898 22911])
+                    ("b" variable
+                       (:pointer 1
+                        :type ("PoseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22912 22925]))                  
+                :type "double")
+                nil [22861 22963])
+            ("GetMaxPoseIndex" function
+               (:parent "PoseStateGraph"
+                :type "int")
+                nil [22967 23032])
+            ("SetMaxPoseIndex" function
+               (:parent "PoseStateGraph"
+                :arguments 
+                  ( ("max_idx" variable (:type "int") (reparse-symbol arg-sub-list) [23071 23083]))                  
+                :type "void")
+                nil [23034 23114])
+            ("IncMaxPoseIndex" function
+               (:parent "PoseStateGraph"
+                :type "void")
+                nil [23116 23177])
+            ("GenerateRandomPoseState" function
+               (:pointer 1
+                :parent "PoseStateGraph"
+                :arguments 
+                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23263 23283]))                  
+                :type ("PoseState" type (:type "class") nil nil))
+                nil [23212 23973])
+            ("ResetPoseGraph" function
+               (:parent "PoseStateGraph"
+                :type "void")
+                nil [23976 24228]))          
+    :file "new_structures.cpp"
+    :pointmax 24231
+    :fsize 24230
+    :lastmodtime '(21536 12584 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "new_structures.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("DSTAR_AGH_H" variable (:constant-flag t) nil [164 175])
+            ("math.h" include (:system-flag t) nil [179 196])
+            ("stack" include (:system-flag t) nil [197 213])
+            ("queue" include (:system-flag t) nil [214 230])
+            ("list" include (:system-flag t) nil [231 246])
+            ("ext/hash_map" include (:system-flag t) nil [247 270])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [274 294])
+            ("__gnu_cxx" using (:type ("__gnu_cxx" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [295 321])
+            ("OpenRAVE" type
+               (:members 
+                  ( ("PoseStateEdge" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [352 372])
+                    ("PoseState" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [422 429])
+                            ("PoseState" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [434 446])
+                            ("PoseState" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [451 479])
+                            ("Initialize" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("dReal" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [501 520]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [485 521])
+                            ("GetPoseVector" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("dReal" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [526 561])
+                            ("AddEdge" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("edge" variable
+                                       (:pointer 1
+                                        :type ("PoseStateEdge" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [579 599]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [566 600])
+                            ("GetOutgoingEdges" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("PoseStateEdge" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [605 652])
+                            ("GetOutgoingEdge" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("finish_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [688 711]))                                  
+                                :type ("PoseStateEdge" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [657 712])
+                            ("getSucc" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :type ("list" type
+                                             (:template-specifier 
+                                                ( ("PoseState" type (:pointer 1) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [733 753]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [718 754])
+                            ("getPred" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :type ("list" type
+                                             (:template-specifier 
+                                                ( ("PoseState" type (:pointer 1) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [774 794]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [759 795])
+                            ("GetInOpenList" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [801 822])
+                            ("SetInOpenList" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("in" variable (:type "bool") (reparse-symbol arg-sub-list) [846 854]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [827 855])
+                            ("GetFeasible" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [861 880])
+                            ("SetFeasible" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("feas" variable (:type "bool") (reparse-symbol arg-sub-list) [902 912]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [885 913])
+                            ("ShortInfo" function
+                               (:prototype-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [958 977])
+                            ("GetIDX" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [983 996])
+                            ("SetIDX" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [1013 1023]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1001 1024])
+                            ("GetParent" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1030 1053])
+                            ("SetParent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1073 1084]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1058 1085])
+                            ("private" label nil (reparse-symbol classsubparts) [1088 1096])
+                            ("idx" variable (:type "int") (reparse-symbol classsubparts) [1101 1109])
+                            ("pose_vector" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("dReal" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1154 1185])
+                            ("outgoing_edges" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("PoseStateEdge" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1190 1233])
+                            ("parent" variable
+                               (:pointer 1
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1238 1256])
+                            ("in_open_list" variable (:type "bool") (reparse-symbol classsubparts) [1298 1316])
+                            ("feasible" variable (:type "bool") (reparse-symbol classsubparts) [1321 1335]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [403 1339])
+                    ("DynamicPath" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1375 1382])
+                            ("StartPose" variable
+                               (:pointer 1
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1395 1416])
+                            ("EndPose" variable
+                               (:pointer 1
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1429 1448])
+                            ("vertices" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("PoseState" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1461 1494])
+                            ("vertice_idxs" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1507 1537])
+                            ("DynamicPath" function
+                               (:constructor-flag t
+                                :type ("DynamicPath" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1550 1592])
+                            ("DynamicPath" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("only_vertex" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1617 1640]))                                  
+                                :type ("DynamicPath" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1605 1748])
+                            ("DynamicPath" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("start_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1773 1795])
+                                    ("vertices" variable (:type ("vector" type
+                                         (:template-specifier 
+                                            ( ("PoseState" type (:pointer 1) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1796 1824]))                                  
+                                :type ("DynamicPath" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1761 1904])
+                            ("l" variable
+                               (:pointer 1
+                                :type ("DynamicPath" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1917 1932])
+                            ("r" variable
+                               (:pointer 1
+                                :type ("DynamicPath" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1945 1960])
+                            ("weight" variable (:type "float") (reparse-symbol classsubparts) [1973 1986])
+                            ("L" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("DynamicPath" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2012 2041])
+                            ("Lstar" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("DynamicPath" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2054 2086])
+                            ("R" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("DynamicPath" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2099 2127])
+                            ("Rstar" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("DynamicPath" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2140 2172])
+                            ("GetVertices" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("PoseState" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2186 2224]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1343 2233])
+                    ("MyComparator" type
+                       (:members 
+                          ( ("()" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("arg1" variable
+                                       (:pointer 1
+                                        :type ("DynamicPath" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2284 2302])
+                                    ("arg2" variable
+                                       (:pointer 1
+                                        :type ("DynamicPath" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2302 2320]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2267 2396]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2239 2403])
+                    ("cmpPaths" type
+                       (:members 
+                          ( ("()" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DynamicPath" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2449 2470])
+                                    ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DynamicPath" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2471 2492]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2433 2823]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2411 2830])
+                    ("hashing_func" type
+                       (:members 
+                          ( ("()" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DynamicPath" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2891 2914]))                                  
+                                :type "unsigned long")
+                                (reparse-symbol classsubparts) [2866 3140]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2836 3147])
+                    ("PoseStateEdge" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3322 3329])
+                            ("PoseStateEdge" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("start_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3346 3368])
+                                    ("finish_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3369 3392])
+                                    ("ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3393 3417]))                                  
+                                :type ("PoseStateEdge" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3332 3418])
+                            ("PoseStateEdge" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("start_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3435 3457])
+                                    ("finish_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3458 3481]))                                  
+                                :type ("PoseStateEdge" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3421 3482])
+                            ("PoseStateEdge" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3485 3515])
+                            ("Initialize" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3519 3537])
+                            ("GetStartPose" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3540 3566])
+                            ("GetFinishPose" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3569 3596])
+                            ("GetTraj" function
+                               (:prototype-flag t
+                                :type ("TrajectoryBasePtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3599 3627])
+                            ("GetTrajFeasible" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3630 3653])
+                            ("SetTraj" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3669 3693]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3656 3694])
+                            ("SetTrajFeasible" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("feasible" variable (:type "bool") (reparse-symbol arg-sub-list) [3718 3732]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3697 3733])
+                            ("weight" variable (:type "float") (reparse-symbol classsubparts) [3736 3749])
+                            ("P" variable (:type ("priority_queue" type
+                                 (:template-specifier 
+                                    ( ("DynamicPath" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3774 3805])
+                            ("Pmap" variable (:type ("map" type
+                                 (:template-specifier 
+                                    ( ("DynamicPath" type (:pointer 1) nil nil)
+                                      ("bool" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3865 3893])
+                            ("Pstar" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("DynamicPath" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3898 3930])
+                            ("updateTime" variable (:type "int") (reparse-symbol classsubparts) [3935 3950])
+                            ("private" label nil (reparse-symbol classsubparts) [3953 3961])
+                            ("s_pose" variable
+                               (:pointer 1
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3964 3982])
+                            ("f_pose" variable
+                               (:pointer 1
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3985 4003])
+                            ("traj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4006 4029])
+                            ("traj_feasible" variable (:type "bool") (reparse-symbol classsubparts) [4032 4051]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3299 4054])
+                    ("PoseVertexPair" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4083 4090])
+                            ("PoseVertexPair" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("pose1" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4114 4131])
+                                    ("pose2" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4132 4149]))                                  
+                                :type ("PoseVertexPair" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4099 4170])
+                            ("P" variable (:type ("priority_queue" type
+                                 (:template-specifier 
+                                    ( ("DynamicPath" type (:pointer 1) nil nil)
+                                      ("vector" type nil nil nil)
+                                      ("MyComparator" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4179 4246])
+                            ("Pmap" variable (:type ("map" type
+                                 (:template-specifier 
+                                    ( ("DynamicPath" type (:pointer 1) nil nil)
+                                      ("bool" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4314 4342])
+                            ("Pstar" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("DynamicPath" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4351 4383])
+                            ("updateTime" variable (:type "int") (reparse-symbol classsubparts) [4392 4407])
+                            ("weight" variable (:type "float") (reparse-symbol classsubparts) [4416 4429]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [4056 4432])
+                    ("PoseStateGraph" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4459 4466])
+                            ("PoseStateGraph" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("PoseStateGraph" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4471 4488])
+                            ("PoseStateGraph" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4493 4526])
+                            ("Initialize" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4548 4568])
+                                    ("graph_size" variable (:type "int") (reparse-symbol arg-sub-list) [4569 4584]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4532 4585])
+                            ("GenerateSimpleGraph" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4618 4638]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4593 4639])
+                            ("GenerateNIncrementGraph1" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4674 4694])
+                                    ("num_joint_increments" variable (:type "int") (reparse-symbol arg-sub-list) [4695 4720]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4644 4721])
+                            ("GenerateNIncrementGraph2" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4756 4776])
+                                    ("num_joint_increments" variable (:type "int") (reparse-symbol arg-sub-list) [4777 4802]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4726 4803])
+                            ("GenerateNIncrementGraph3" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4838 4858])
+                                    ("num_joint_increments" variable (:type "int") (reparse-symbol arg-sub-list) [4859 4884]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4808 4885])
+                            ("GenerateNIncrementGraph" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4919 4939])
+                                    ("num_joint_increments" variable (:type "int") (reparse-symbol arg-sub-list) [4940 4965]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4890 4966])
+                            ("GenerateFourIncrementGraph" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5003 5023]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4971 5024])
+                            ("GenerateEightIncrementGraph" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5062 5082]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5029 5083])
+                            ("GenerateFourIncrementGraph1" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5121 5141]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5088 5142])
+                            ("GenerateEightIncrementGraph1" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5181 5201]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5147 5202])
+                            ("GenerateFourIncrementGraph2" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5240 5260]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5207 5261])
+                            ("GenerateEightIncrementGraph2" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5300 5320]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5266 5321])
+                            ("GenerateFourIncrementGraph3" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5359 5379]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5326 5380])
+                            ("GenerateEightIncrementGraph3" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5419 5439]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5385 5440])
+                            ("GetPath" function
+                               (:prototype-flag t
+                                :type ("list" type
+                                     (:template-specifier 
+                                        ( ("PoseState" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [5445 5472])
+                            ("GetPoses" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("PoseState" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [5477 5513])
+                            ("AddPoseToGraph" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("joint1_val" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5539 5556])
+                                    ("joint2_val" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5557 5574])
+                                    ("joint3_val" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5575 5592])
+                                    ("joint4_val" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5593 5610])
+                                    ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [5611 5619]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5519 5620])
+                            ("AddPoseToGraph" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5645 5661])
+                                    ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [5662 5670]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5625 5671])
+                            ("AddNewEdgeToGraph" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("start_pose_idx" variable (:type "int") (reparse-symbol arg-sub-list) [5699 5718])
+                                    ("finish_pose_idx" variable (:type "int") (reparse-symbol arg-sub-list) [5719 5739]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5676 5740])
+                            ("AddNewOneDirectionEdgeToGraph" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("start_pose_idx" variable (:type "int") (reparse-symbol arg-sub-list) [5790 5809])
+                                    ("finish_pose_idx" variable (:type "int") (reparse-symbol arg-sub-list) [5810 5830]))                                  
+                                :type ("PoseStateEdge" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5745 5831])
+                            ("GetEdge" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("start_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5859 5881])
+                                    ("finish_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5881 5904]))                                  
+                                :type ("PoseStateEdge" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5836 5905])
+                            ("GetPose" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [5929 5937]))                                  
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5910 5938])
+                            ("Structure" function
+                               (:prototype-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5943 5962])
+                            ("StructureRRT" function
+                               (:prototype-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5967 5989])
+                            ("bestPath" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("PoseState" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5994 6022])
+                            ("fw_dist" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::vector" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [6027 6069])
+                            ("fw_next" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::vector" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [6074 6116])
+                            ("FW" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [6121 6131])
+                            ("PrintFWNextMatrix" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [6136 6161])
+                            ("PrintFWDistMatrix" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [6166 6191])
+                            ("GetBestPath" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("start_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6221 6243])
+                                    ("finish_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6244 6267]))                                  
+                                :type ("DynamicPath" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6196 6268])
+                            ("ReconstructPath" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("t" variable (:type "int") (reparse-symbol arg-sub-list) [6308 6314])
+                                    ("j" variable (:type "int") (reparse-symbol arg-sub-list) [6315 6321]))                                  
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("PoseState" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [6273 6322])
+                            ("GenerateRandomPoseState" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6363 6383]))                                  
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6328 6384])
+                            ("near" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6418 6434])
+                                    ("k" variable (:type "int") (reparse-symbol arg-sub-list) [6435 6441]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("PoseState" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [6389 6442])
+                            ("near" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6476 6492])
+                                    ("radius" variable (:type "double") (reparse-symbol arg-sub-list) [6493 6507]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("PoseState" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [6447 6508])
+                            ("nearest" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6532 6548])
+                                    ("max_distance" variable (:type "double") (reparse-symbol arg-sub-list) [6549 6569]))                                  
+                                :type ("PoseState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6513 6570])
+                            ("pose_distance" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("a" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6596 6609])
+                                    ("b" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6610 6623]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [6575 6624])
+                            ("ResetPoseGraph" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [6630 6652])
+                            ("GetMaxPoseIndex" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [6658 6680])
+                            ("SetMaxPoseIndex" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("max_idx" variable (:type "int") (reparse-symbol arg-sub-list) [6724 6736]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6703 6737])
+                            ("IncMaxPoseIndex" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [6742 6765])
+                            ("Update" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("u" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6804 6817])
+                                    ("v" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6818 6831])
+                                    ("w" variable (:type "float") (reparse-symbol arg-sub-list) [6832 6840]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6792 6841])
+                            ("Distance" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("start" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6861 6878])
+                                    ("end" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6879 6894]))                                  
+                                :type "float")
+                                (reparse-symbol classsubparts) [6846 6895])
+                            ("Path" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("start" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6918 6935])
+                                    ("end" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6936 6951]))                                  
+                                :type ("DynamicPath" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6900 6952])
+                            ("vertexPairMap" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::pair" type nil nil nil)
+                                      ("PoseVertexPair" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [6958 7032])
+                            ("GetVertexPair" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("pose1" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7067 7084])
+                                    ("pose2" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7085 7102]))                                  
+                                :type ("PoseVertexPair" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7037 7103])
+                            ("CreateVertexPair" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("pose1" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7141 7158])
+                                    ("pose2" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7159 7176]))                                  
+                                :type ("PoseVertexPair" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7108 7177])
+                            ("PrintPath" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :type ("DynamicPath" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7197 7215]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7182 7216])
+                            ("GetVertexPairs" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("PoseVertexPair" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [7222 7268])
+                            ("updateTime" variable (:type "int") (reparse-symbol classsubparts) [7273 7288])
+                            ("CalculatePathWeight" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :type ("DynamicPath" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7320 7338]))                                  
+                                :type "float")
+                                (reparse-symbol classsubparts) [7294 7339])
+                            ("InitializeDynamicGraph" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [7345 7375])
+                            ("private" label nil (reparse-symbol classsubparts) [7379 7387])
+                            ("poses" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("PoseState" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [7392 7423])
+                            ("max_pose_index" variable (:type "int") (reparse-symbol classsubparts) [7472 7491])
+                            ("UnsmoothedUpdate" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("u" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7557 7570])
+                                    ("v" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7571 7584])
+                                    ("w" variable (:type "float") (reparse-symbol arg-sub-list) [7585 7593]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7535 7594])
+                            ("Cleanup" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("u" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7620 7633])
+                                    ("v" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7634 7647]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7607 7648])
+                            ("Fixup" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("u" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7672 7685])
+                                    ("v" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7686 7699])
+                                    ("weight" variable (:type "float") (reparse-symbol arg-sub-list) [7700 7713]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7661 7714]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [4435 7717])
+                    ("pose_state_hash" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [7809 7816])
+                            ("()" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("s" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7837 7856]))                                  
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7819 7958]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [7784 7961]))                  
+                :type "namespace")
+                nil [326 7965]))          
+    :file "new_structures.h"
+    :pointmax 8016
+    :fsize 8015
+    :lastmodtime '(21536 12584 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DSTAR_AGH_H")
+          )
+
+    )
+   (semanticdb-table "apsp_planner.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("openrave-core.h" include (:system-flag t) nil [274 300])
+            ("vector" include (:system-flag t) nil [301 318])
+            ("sstream" include (:system-flag t) nil [319 337])
+            ("iostream" include (:system-flag t) nil [338 357])
+            ("boost/format.hpp" include (:system-flag t) nil [358 385])
+            ("openrave/planningutils.h" include (:system-flag t) nil [386 421])
+            ("stdlib.h" include (:system-flag t) nil [422 441])
+            ("orexample.h" include nil nil [442 464])
+            ("fstream" include (:system-flag t) nil [465 483])
+            ("new_structures.h" include nil nil [484 511])
+            ("soheaders.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [530 554])
+            ("LString.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [555 577])
+            ("LGraph.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [578 599])
+            ("LGraphGen.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [600 624])
+            ("OpenRAVE" using (:type ("OpenRAVE" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [635 660])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [665 685])
+            ("sData" variable
+               (:typemodifiers ("static")
+                :type ("" type
+                     (:members 
+                        ( ("mCheckerStatus" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol classsubparts) [712 742])
+                          ("mVerboseStatus" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol classsubparts) [835 865])
+                          ("mAdjustSeq" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol classsubparts) [924 950])
+                          ("mGraphFile" variable
+                             (:dereference 1
+                              :type ("i1" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1057 1089])
+                          ("mResultsPath" variable
+                             (:dereference 1
+                              :type ("i1" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1166 1200])
+                          ("mExpName" variable
+                             (:dereference 1
+                              :type ("i1" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1237 1267])
+                          ("mGraph" variable
+                             (:pointer 1
+                              :type ("LGraph" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1309 1331])
+                          ("mEdgeWeights" variable
+                             (:pointer 1
+                              :type ("LEdgeInfo" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1386 1414])
+                          ("mGraphSeed" variable (:type ("ui4" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1476 1502])
+                          ("mMinGraphW" variable (:type ("ui4" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1557 1583])
+                          ("mMaxGraphW" variable (:type ("ui4" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1641 1667])
+                          ("mSequence" variable
+                             (:pointer 1
+                              :type ("LArray" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1725 1750])
+                          ("mSeqSeed" variable (:type ("ui4" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1812 1836])
+                          ("mMinSeqW" variable (:type ("ui4" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1896 1920])
+                          ("mMaxSeqW" variable (:type ("ui4" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1983 2007])
+                          ("mIncCount" variable (:type ("ui4" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2068 2093])
+                          ("mDecCount" variable (:type ("ui4" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2151 2176])
+                          ("mTime" variable (:type ("f8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2238 2259])
+                          ("mLDSPConfig" variable (:type ("LDSP_TSetup" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2338 2365])
+                          ("mCDAPSPConfig" variable (:type ("CDAPSP_TConfig" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2429 2458]))                        
+                      :type "struct")
+                      nil nil))
+                nil [692 2539])
+            ("_FindMinMaxGraphWeight" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [2548 3006])
+            ("_LoadDIMACSGraph" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("inPathName" variable
+                       (:dereference 1
+                        :type ("i1" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3043 3063]))                  
+                :type "void")
+                nil [3014 3905])
+            ("_AskDIMACSGraph" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [3912 4208])
+            ("_Init" function
+               (:typemodifiers ("static")
+                :type ("Bool" type (:type "class") nil nil))
+                nil [4214 4542])
+            ("cppexamples" type
+               (:members 
+                  ( ("obstacles" variable
+                       (:typemodifiers ("static")
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("KinBodyPtr" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [4581 4622])
+                    ("PlanningPlannerExample" type
+                       (:superclasses 
+                          ( ("OpenRAVEExample" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4700 4707])
+                            ("PlanCallback" function
+                               (:arguments 
+                                  ( ("progress" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PlannerBase::PlannerProgress" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4744 4789]))                                  
+                                :type ("PlannerAction" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4717 4860])
+                            ("InitializePlanParameters" function
+                               (:arguments 
+                                  ( ("penv1" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4922 4947])
+                                    ("probot1" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4948 4969])
+                                    ("params1" variable (:type ("PlannerBase::PlannerParametersPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4970 5012])
+                                    ("planner1" variable (:type ("PlannerBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5024 5048])
+                                    ("pmanip1" variable (:type ("RobotBase::ManipulatorPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5049 5083]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4892 5261])
+                            ("SetEdgeFeasibility" function
+                               (:arguments 
+                                  ( ("start_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5337 5359])
+                                    ("finish_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5360 5383])
+                                    ("feasible" variable (:type "bool") (reparse-symbol arg-sub-list) [5384 5398]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5313 5657])
+                            ("SetPoseInfeasible" function
+                               (:arguments 
+                                  ( ("pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5690 5706]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5667 6260])
+                            ("SetPoseFeasible" function
+                               (:arguments 
+                                  ( ("pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6290 6306]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6269 7266])
+                            ("ComputeEdgeTrajectories" function
+                               (:arguments 
+                                  ( ("pt" variable
+                                       (:pointer 1
+                                        :type ("PoseStateGraph" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7345 7364]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7316 9599])
+                            ("ComputeTrajectoryForEdge" function
+                               (:arguments 
+                                  ( ("edge" variable
+                                       (:pointer 1
+                                        :type ("PoseStateEdge" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9634 9654]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9604 9953])
+                            ("PadPoseVectorWithDistalJoints" function
+                               (:arguments 
+                                  ( ("pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10003 10019]))                                  
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("dReal" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [9959 10281])
+                            ("PlanEdgeTrajectory" function
+                               (:arguments 
+                                  ( ("start_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10310 10332])
+                                    ("finish_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10333 10356])
+                                    ("ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10357 10381]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [10287 11056])
+                            ("PlanStartToFinish" function
+                               (:arguments 
+                                  ( ("start_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11084 11106])
+                                    ("finish_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11107 11130])
+                                    ("ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11131 11155])
+                                    ("add_to_pose_graph" variable (:type "bool") (reparse-symbol arg-sub-list) [11156 11179]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [11062 12988])
+                            ("ExecuteTrajectory" function
+                               (:arguments 
+                                  ( ("ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13015 13039])
+                                    ("pgraph" variable (:type ("GraphHandlePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13040 13062])
+                                    ("draw_trajectory" variable (:type "bool") (reparse-symbol arg-sub-list) [13063 13084]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [12993 14296])
+                            ("ExecuteLDSPTrajectorySequence" function
+                               (:arguments 
+                                  ( ("pg" variable
+                                       (:pointer 1
+                                        :type ("PoseStateGraph" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14334 14353])
+                                    ("theLDSP" variable
+                                       (:pointer 1
+                                        :type ("LDSP" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14354 14368])
+                                    ("pgraph" variable (:type ("GraphHandlePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14369 14391])
+                                    ("draw_trajectory" variable (:type "bool") (reparse-symbol arg-sub-list) [14392 14413])
+                                    ("start_idx" variable (:type "int") (reparse-symbol arg-sub-list) [14414 14428])
+                                    ("end_idx" variable (:type "int") (reparse-symbol arg-sub-list) [14429 14441]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [14299 15221])
+                            ("TestingPaths" function (:type "void") (reparse-symbol classsubparts) [15225 16118])
+                            ("TestingObstacles" function (:type "void") (reparse-symbol classsubparts) [16120 16628])
+                            ("CheckTrajectory" function
+                               (:arguments 
+                                  ( ("ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16653 16677]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [16632 17261])
+                            ("CheckPoseFeasibility" function
+                               (:arguments 
+                                  ( ("pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17294 17310])
+                                    ("print_warning" variable (:type "bool") (reparse-symbol arg-sub-list) [17311 17330]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [17268 18077])
+                            ("GetInfeasiblePoses" function
+                               (:arguments 
+                                  ( ("pt" variable
+                                       (:pointer 1
+                                        :type ("PoseStateGraph" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18116 18135])
+                                    ("theLDSP" variable
+                                       (:pointer 1
+                                        :type ("LDSP" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18136 18150]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [18080 19465])
+                            ("UpdatePoseFeasibility" function
+                               (:arguments 
+                                  ( ("pt" variable
+                                       (:pointer 1
+                                        :type ("PoseStateGraph" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19498 19517])
+                                    ("theLDSP" variable
+                                       (:pointer 1
+                                        :type ("LDSP" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19518 19532]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [19471 21453])
+                            ("TestTrajectory" function
+                               (:arguments 
+                                  ( ("ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21479 21503]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [21459 22560])
+                            ("TimeScaleTrajectory" function
+                               (:arguments 
+                                  ( ("ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22589 22613])
+                                    ("scale_factor" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22614 22633]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [22564 22960])
+                            ("PlanAndExecuteStartToFinish" function
+                               (:arguments 
+                                  ( ("start_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22995 23017])
+                                    ("finish_pose" variable
+                                       (:pointer 1
+                                        :type ("PoseState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [23018 23041])
+                                    ("pose_graph" variable
+                                       (:pointer 1
+                                        :type ("PoseStateGraph" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [23042 23069])
+                                    ("pgraph" variable (:type ("GraphHandlePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23070 23092])
+                                    ("add_to_pose_graph" variable (:type "bool") (reparse-symbol arg-sub-list) [23095 23118])
+                                    ("draw_trajectory" variable (:type "bool") (reparse-symbol arg-sub-list) [23119 23140]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [22963 23373])
+                            ("Generate64NodeGraphAndDisplay" function (:type "void") (reparse-symbol classsubparts) [23375 23715])
+                            ("Generate_N_NodeGraph" function
+                               (:arguments 
+                                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [23743 23749]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [23717 24017])
+                            ("Generate64NodeGraph" function (:type "void") (reparse-symbol classsubparts) [24019 24077])
+                            ("Generate256NodeGraph" function (:type "void") (reparse-symbol classsubparts) [24079 24139])
+                            ("Generate1kNodeGraph" function (:type "void") (reparse-symbol classsubparts) [24141 24201])
+                            ("Generate512NodeGraph" function (:type "void") (reparse-symbol classsubparts) [24203 24263])
+                            ("Generate4kNodeGraph" function (:type "void") (reparse-symbol classsubparts) [24265 24325])
+                            ("SetRobotPose" function (:type "void") (reparse-symbol classsubparts) [24329 24930])
+                            ("ResetRobotPose" function (:type "void") (reparse-symbol classsubparts) [24932 25163])
+                            ("CheckRobotPose" function (:type "void") (reparse-symbol classsubparts) [25165 25695])
+                            ("InputPose" function (:type "int") (reparse-symbol classsubparts) [25697 26330])
+                            ("PerformTestShort" function
+                               (:arguments 
+                                  ( ("start_pose_index" variable (:type "int") (reparse-symbol arg-sub-list) [26355 26376])
+                                    ("finish_pose_index" variable (:type "int") (reparse-symbol arg-sub-list) [26377 26399]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [26333 26403])
+                            ("AddObstacleBoxes" function (:type "void") (reparse-symbol classsubparts) [26406 26791])
+                            ("RemoveObstacleBox" function
+                               (:arguments 
+                                  ( ("name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26817 26829]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [26794 27069])
+                            ("PrintJointLimits" function
+                               (:arguments 
+                                  ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27094 27114]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [27072 27325])
+                            ("TestCases" function (:type "void") (reparse-symbol classsubparts) [27327 28328])
+                            ("TestCases256" function (:type "void") (reparse-symbol classsubparts) [28330 30538])
+                            ("GetLDSPPath" function
+                               (:arguments 
+                                  ( ("theLDSP" variable
+                                       (:pointer 1
+                                        :type ("LDSP" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30579 30593])
+                                    ("start_idx" variable (:type "int") (reparse-symbol arg-sub-list) [30594 30608])
+                                    ("end_idx" variable (:type "int") (reparse-symbol arg-sub-list) [30609 30621]))                                  
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("PoseState" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [30548 30962])
+                            ("TestEx" function (:type "void") (reparse-symbol classsubparts) [30965 31157])
+                            ("CreateDIMFile" function (:type "void") (reparse-symbol classsubparts) [31162 32168])
+                            ("FW" function (:type "void") (reparse-symbol classsubparts) [32172 33196])
+                            ("Test1kGraph" function (:type "void") (reparse-symbol classsubparts) [33198 33585])
+                            ("TestRandomObstacleUpdate" function
+                               (:arguments 
+                                  ( ("trials" variable (:type "int") (reparse-symbol arg-sub-list) [33617 33628]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [33587 35211])
+                            ("AddRandomObstacleBox" function
+                               (:arguments 
+                                  ( ("l" variable (:type "float") (reparse-symbol arg-sub-list) [35240 35248]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [35214 35901])
+                            ("TestObstaclePaths" function (:type "void") (reparse-symbol classsubparts) [35904 38329])
+                            ("InvalidatePoses" function
+                               (:arguments 
+                                  ( ("theLDSP" variable
+                                       (:pointer 1
+                                        :type ("LDSP" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [38390 38404])
+                                    ("poses" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [38405 38428]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [38370 39222])
+                            ("ValidatePoses" function
+                               (:arguments 
+                                  ( ("theLDSP" variable
+                                       (:pointer 1
+                                        :type ("LDSP" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [39243 39257])
+                                    ("poses" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [39258 39281]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [39224 40111])
+                            ("TestObstaclePos" function (:type "void") (reparse-symbol classsubparts) [40113 40458])
+                            ("TestInputPoses" function (:type "void") (reparse-symbol classsubparts) [40460 40580])
+                            ("TestPlacingObstacleBox" function (:type "void") (reparse-symbol classsubparts) [40583 41144])
+                            ("AddObstacleBox1" function (:type "void") (reparse-symbol classsubparts) [41147 41533])
+                            ("AddObstacleBox2" function (:type "void") (reparse-symbol classsubparts) [41535 41924])
+                            ("AddObstacleBox3" function (:type "void") (reparse-symbol classsubparts) [41926 42310])
+                            ("testPathInputs" function (:type "void") (reparse-symbol classsubparts) [42312 43038])
+                            ("Proceed" function (:type "void") (reparse-symbol classsubparts) [43040 43124])
+                            ("demothread" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [43155 43164])
+                                    ("argv" variable
+                                       (:pointer 2
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [43165 43178]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [43131 45044])
+                            ("private" label nil (reparse-symbol classsubparts) [45046 45054])
+                            ("penv_cur" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [45057 45085])
+                            ("probot_cur" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [45088 45112])
+                            ("params_cur" variable (:type ("PlannerBase::PlannerParametersPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [45115 45160])
+                            ("planner_cur" variable (:type ("PlannerBasePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [45163 45190])
+                            ("pmanip_cur" variable (:type ("RobotBase::ManipulatorPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [45193 45230])
+                            ("pose_graph_ptr_cur" variable
+                               (:pointer 1
+                                :type ("PoseStateGraph" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [45233 45268]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [4632 45311]))                  
+                :type "namespace")
+                nil [4550 45314])
+            ("example_cur" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("cppexamples::PlanningPlannerExample" type (:type "class") nil nil))
+                nil [45347 45403])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [45416 45425])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45426 45439]))                  
+                :type "int")
+                nil [45407 45550])
+            ("plan_start_to_finish_api" function
+               (:arguments 
+                  ( ("start_pose_index" variable (:type "int") (reparse-symbol arg-sub-list) [45584 45605])
+                    ("finish_pose_index" variable (:type "int") (reparse-symbol arg-sub-list) [45606 45628]))                  
+                :type "void")
+                nil [45554 45702]))          
+    :file "apsp_planner.cpp"
+    :pointmax 45705
+    :fsize 45704
+    :lastmodtime '(21536 12584 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "orexample.h"
+    :file "orexample.h"
+    :fsize 3118
+    :lastmodtime '(21536 12584 0 0)
+    )
+   (semanticdb-table "soheaders.h"
+    :file "soheaders.h"
+    :fsize 288
+    :lastmodtime '(21536 12584 0 0)
+    )
+   (semanticdb-table "LGraph.h"
+    :file "LGraph.h"
+    :fsize 5827
+    :lastmodtime '(21536 12584 0 0)
+    )
+   )
+  :file "!Users!efernan!Dropbox (Personal)!MIT!MERS!Development!chekhov!APSP_Planner!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -2,6 +2,7 @@
 
 (setq efg-packages
       '(
+		slime
         cpputils-cmake
         ac-slime
         auto-complete
@@ -232,8 +233,32 @@
 
 
 ;; Load MERS mars-toolkit setup file
-(load "mars-setup")
+;; (load "mars-setup")
+(defvar mtk-manager-emacs-path "~/dotfiles/.emacs.d/emacs-ide"
+  "Set this to the folder containing the Emacs IDE repository.")
+(setq slime-lisp-implementations
+      `((allegro ,(if (string= system-type "windows-nt")
+                      ;; We're on a Windows system. In order to use Allegro, we
+                      ;; need a helper program. Include the full path to
+                      ;; alisp.exe if it is not on your path.
+                      (list (concat mtk-manager-emacs-path "/start-swank.bat") "alisp.exe")
+                      ;; We're on GNU/Linux or OSX. No helper needed.
+                      '("alisp")))
+        (sbcl ("sbcl"))))
 
+;; Set this to one of the implementations defined above to define your default
+;; Lisp implementation.
+(setq slime-default-lisp 'sbcl)
+;; (setq slime-default-lisp 'allegro)
+
+;; Add the folder containing the MERS Emacs libraries to the load-path.
+(add-to-list 'load-path mtk-manager-emacs-path)
+
+;; Load the MERS library. The 'mers-simple library tries to give you a
+;; configuration that "just works." If you want to pick and choose pieces of the
+;; MERS libraries, include them separately. But most people will not wnat to do
+;; that.
+(require 'mers-lisp)
 
 
 ;; Language hooks
@@ -331,6 +356,17 @@
 ;; Stop extremely annoying beep in osx
 (setq ring-bell-function #'ignore)
 ;; (setq visible-bell t)
+
+(setq slime-lisp-implementations
+      `((allegro ,(if (string= system-type "windows-nt")
+                      ;; We're on a Windows system. In order to use Allegro, we
+                      ;; need a helper program. Include the full path to
+                      ;; alisp.exe if it is not on your path.
+                      (list (concat mtk-manager-emacs-path "/start-swank.bat") "alisp.exe")
+                      ;; We're on GNU/Linux or OSX. No helper needed.
+                      '("alisp")))
+        (sbcl ("sbcl"))))
+(setq slime-default-lisp 'allegro)
 
 
 (custom-set-variables

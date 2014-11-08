@@ -1,0 +1,3 @@
+[submodule ".emacs.d/emacs-ide"]
+	path = .emacs.d/emacs-ide
+	url = git@git.mers.csail.mit.edu:mars-toolkit/emacs-ide.git
