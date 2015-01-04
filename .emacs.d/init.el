@@ -1,4 +1,4 @@
-;;; Packages:
+b;;; Packages:
 
 (setq efg-packages
       '(
@@ -50,7 +50,7 @@
 
 (eval-when-compile (require 'cl))
 
-(add-to-list 'load-path "~/.emacs.d/")
+;; (add-to-list 'load-path "~/.emacs.d/")
 
 ;; Setup packages
 (require 'package)
@@ -231,6 +231,61 @@
 (global-set-key (kbd "C-;") 'comment-or-uncomment-current-line-or-region)
 
 
+;; ORG MODE ;;;;;
+;;;;;;;;;;;;;;;;;
+
+;; org mode settings
+;; from http://pages.sachachua.com/.emacs.d/Sacha.html#unnumbered-45
+(global-set-key (kbd "C-c r") 'org-capture)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c L") 'org-insert-link-global)
+(global-set-key (kbd "C-c O") 'org-open-at-point-global)
+(global-set-key (kbd "<f9> <f9>") 'org-agenda-list)
+(global-set-key (kbd "<f9> <f8>") (lambda () (interactive) (org-capture nil "r")))
+;; (global-set-key (kbd "C-TAB") 'org-cycle org-mode-map)
+;; (global-set-key (kbd "C-c v") 'org-show-todo-tree org-mode-map)
+;; (global-set-key (kbd "C-c C-r") 'org-refile org-mode-map)
+;; (global-set-key (kbd "C-c R") 'org-reveal org-mode-map)
+
+(setq org-goto-interface 'outline
+      org-goto-max-level 10)
+(require 'imenu)
+(setq org-startup-folded nil)
+(global-set-key (kbd "M-o") 'imenu)
+(global-set-key (kbd "C-c j") 'org-clock-goto) ;; jump to current task from anywhere
+(global-set-key (kbd "C-c C-w") 'org-refile)
+(setq org-cycle-include-plain-lists 'integrate)
+
+(setq org-directory "~/Dropbox/org")
+(setq org-default-notes-file "~/Dropbox/org/organizer.org")
+
+
+(setq org-log-into-drawer "LOGBOOK")
+(setq org-clock-into-drawer 1)
+
+
+
+(setq org-clock-idle-time nil)
+(setq org-log-done 'time)
+(setq org-clock-persist t)
+(setq org-clock-report-include-clocking-task t)
+
+(org-clock-persistence-insinuate)
+
+
+(setq org-agenda-files
+      (delq nil
+            (mapcar (lambda (x) (and (file-exists-p x) x))
+                    '("~/Dropbox/org/organizer.org"))))
+
+(setq org-reverse-note-order t)
+(setq org-refile-use-outline-path nil)
+(setq org-refile-allow-creating-parent-nodes 'confirm)
+(setq org-refile-use-cache nil)
+(setq org-refile-targets '((org-agenda-files . (:maxlevel . 6))))
+(setq org-blank-before-new-entry nil)
+
 
 ;; Load MERS mars-toolkit setup file
 ;; (load "mars-setup")
@@ -356,17 +411,6 @@
 ;; Stop extremely annoying beep in osx
 (setq ring-bell-function #'ignore)
 ;; (setq visible-bell t)
-
-(setq slime-lisp-implementations
-      `((allegro ,(if (string= system-type "windows-nt")
-                      ;; We're on a Windows system. In order to use Allegro, we
-                      ;; need a helper program. Include the full path to
-                      ;; alisp.exe if it is not on your path.
-                      (list (concat mtk-manager-emacs-path "/start-swank.bat") "alisp.exe")
-                      ;; We're on GNU/Linux or OSX. No helper needed.
-                      '("alisp")))
-        (sbcl ("sbcl"))))
-(setq slime-default-lisp 'allegro)
 
 
 (custom-set-variables
