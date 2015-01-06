@@ -274,10 +274,12 @@ b;;; Packages:
 (org-clock-persistence-insinuate)
 
 
-(setq org-agenda-files
-      (delq nil
-            (mapcar (lambda (x) (and (file-exists-p x) x))
-                    '("~/Dropbox/org/organizer.org"))))
+;; (setq org-agenda-files
+;;       (delq nil
+;;             (mapcar (lambda (x) (and (file-exists-p x) x))
+;;                     '("~/Dropbox/org/organizer.org"))))
+(setq org-agenda-files '("~/Dropbox/org/"))
+
 
 (setq org-reverse-note-order t)
 (setq org-refile-use-outline-path nil)
