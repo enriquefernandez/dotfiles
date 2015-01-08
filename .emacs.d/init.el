@@ -1,4 +1,4 @@
-b;;; Packages:
+;;; Packages:
 
 (setq efg-packages
       '(
@@ -252,7 +252,7 @@ b;;; Packages:
       org-goto-max-level 10)
 (require 'imenu)
 (setq org-startup-folded nil)
-(global-set-key (kbd "M-o") 'imenu)
+; (global-set-key (kbd "M-o") 'imenu)
 (global-set-key (kbd "C-c j") 'org-clock-goto) ;; jump to current task from anywhere
 (global-set-key (kbd "C-c C-w") 'org-refile)
 (setq org-cycle-include-plain-lists 'integrate)
