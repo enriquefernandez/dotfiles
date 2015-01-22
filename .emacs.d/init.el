@@ -143,10 +143,21 @@
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;; Windmove
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
 ;; (global-set-key (kbd "C-c h")  'windmove-left)
 ;; (global-set-key (kbd "C-c l") 'windmove-right)
 ;; (global-set-key (kbd "C-c j")    'windmove-up)
 ;; (global-set-key (kbd "C-c k")  'windmove-down)
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftleft-final-hook 'windmove-left)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+(add-hook 'org-shiftright-final-hook 'windmove-right)
+
+(setq windmove-wrap-around t)
+
+;; Winner mode auto on
+(winner-mode 1)
 
 ;; Start to org mode directly
 (setq inhibit-splash-screen t
