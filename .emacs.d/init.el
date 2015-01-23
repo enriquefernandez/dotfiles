@@ -2,7 +2,7 @@
 
 (setq efg-packages
       '(
-		slime
+        slime
         cpputils-cmake
         ac-slime
         auto-complete
@@ -26,14 +26,15 @@
         ein
         multiple-cursors
         yasnippet
-		auctex
-		auctex-latexmk
-		exec-path-from-shell
-		helm
+        auctex
+        auctex-latexmk
+        exec-path-from-shell
+        helm
         cmake-mode
-		helm-gtags
-		helm-projectile
-		ag
+        helm-gtags
+        helm-projectile
+        ag
+        window-numbering
         ))
 
 
@@ -158,6 +159,12 @@
 
 ;; Winner mode auto on
 (winner-mode 1)
+
+;; Window numbering
+(require 'window-numbering)
+;; highlight the window number in pink color
+(custom-set-faces '(window-numbering-face ((t (:foreground "DeepPink" :underline "DeepPink" :weight bold)))))
+(window-numbering-mode 1)
 
 ;; Start to org mode directly
 (setq inhibit-splash-screen t
