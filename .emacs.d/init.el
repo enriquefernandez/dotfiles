@@ -35,6 +35,7 @@
         helm-projectile
         ag
         window-numbering
+        ledger-mode
         ))
 
 
