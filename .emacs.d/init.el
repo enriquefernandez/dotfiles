@@ -36,6 +36,7 @@
         ag
         window-numbering
         ledger-mode
+        lua-mode
         ))
 
 
