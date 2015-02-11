@@ -37,6 +37,8 @@
         window-numbering
         ledger-mode
         lua-mode
+        ;; elpy
+        ace-jump-mode
         ))
 
 
@@ -133,6 +135,9 @@
 ;; (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
 ;; (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
 ;; (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+
+;; Ace jump mode
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 ;; Projectile
 (projectile-global-mode)
@@ -378,6 +383,19 @@
 ;; Python jedi
 ;;(add-hook 'python-mode-hook 'jedi:setup)
 ;;(setq jedi:complete-on-dot t)
+
+;; Elpy - Python
+;; conf from http://www.xiaohanyu.me/oh-my-emacs/modules/ome-python.html
+;; (elpy-enable t)
+;; (setq elpy-rpc-backend "jedi")
+;; (when (executable-find "ipython")
+;;   (elpy-use-ipython))
+;; (when (el-get-package-installed-p 'flycheck)
+;;   (setq elpy-default-minor-modes
+;; 		(remove 'flymake-mode
+;; 				elpy-default-minor-modes)))
+;; (define-key python-mode-map (kbd "RET")
+;;   'newline-and-indent)
 
 ;; Multiple cursors
 (require 'multiple-cursors)
