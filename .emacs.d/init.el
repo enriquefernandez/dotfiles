@@ -137,7 +137,12 @@
 ;; (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
 
 ;; Ace jump mode
+;; free org mode conflicting key-binding
+(add-hook 'org-mode-hook
+          '(lambda ()
+             (define-key org-mode-map (kbd "C-c SPC") nil)))
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
 
 ;; Projectile
 (projectile-global-mode)
