@@ -418,6 +418,11 @@
 (server-start)
 
 
+;; Flyspell remove C-; command
+(add-hook 'flyspell-mode-hook
+          '(lambda ()
+             (define-key flyspell-mode-map (kbd "C-;") nil)))
+
 ;; AucTeX
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
