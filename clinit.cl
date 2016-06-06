@@ -23,18 +23,22 @@
   ;;  o SBCL does NOT resolve OS dependent symbols like "~" (for the home directory)
   ;;    for SBCL you MUST specify the complete/absolute pathname.
   (defconstant *mars-toolkit-pathname*
-	"/Users/efernan/Dropbox/MIT/MERS/mars-toolkit/"    ;;CUSTOMIZE
+	"/Users/efernan/Dropbox (MIT)/MIT/MERS/mars-toolkit/"    ;;CUSTOMIZE
 	"Location of the Mars Toolkit top-level directory.")
 
 ;;; Load the Mars Toolkit system definitions.
   ;; (load (merge-pathnames "load-MARS-systems.lisp" *mars-toolkit-pathname*))
 
   (pushnew :cplex *features*)
+  (pushnew :ipopt *features*)
+  (pushnew :gurobi *features*)
+  (pushnew :lpsolve *features*)
 
   (defun load-mtk (&optional (ws "primary"))
 	"Load the mars toolkit and set the active workspace to be WS."
-	(load "/Users/efernan/Dropbox/MIT/MERS/mtk/manager/setup.lisp")
+	(load "/Users/efernan/Dropbox (MIT)/MIT/MERS/mtk/manager/setup.lisp")
 	(funcall (read-from-string "mtk:change-workspace") ws))
 
+  (load-mtk)
   (print "Finished loading ~/clinit.cl.")
 )
